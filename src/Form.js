@@ -583,7 +583,7 @@ function Form() {
 
         }
       </div>
-      {submitted && formValues.shippingOption == "Easy Ship Prime" &&
+      {submitted && formValues.shippingOption === "Easy Ship Prime" &&
         <div>
           <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by Non Prime Customers</b></p>
           <div className='tableWrapper'>

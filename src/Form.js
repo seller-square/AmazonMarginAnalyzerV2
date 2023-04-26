@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './index.css';
 // import Header from './header';
 
 function Form() {
-  const [easyShipPrimeTable, seteasyShipPrimeTable] = useState(false);
+ // const [easyShipPrimeTable, seteasyShipPrimeTable] = useState(false);
   const [showAdditionalShippingCost, setShowAdditionalShippingCost] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -121,12 +121,7 @@ function Form() {
     if (name === "shippingOption") {
       setShowAdditionalShippingCost(value === "Easy Ship");
     }
-    if (name === "shippingOption" && formValues.shippingOption == "Easy Ship Prime") {
-      [easyShipPrimeTable, seteasyShipPrimeTable] = true;
-    }
-
-
-
+ 
     if ((name === "sellingPrice" && value <= 80) || (Number(formValues.costPrice) <= 0) || (Number(formValues.packingWeight) <= 0) || (Number(formValues.breadth)) || (Number(formValues.length)) || (Number(formValues.height))) {
       setFormErrors({
         ...formErrors,

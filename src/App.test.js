@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import EmptyDiv from './EmptyDiv';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByTestId('learn-react-link');
-  expect(linkElement).toBeInTheDocument();
+test('renders an empty div', () => {
+  render(<EmptyDiv />);
+  const emptyDiv = screen.getByTestId('empty-div');
+  expect(emptyDiv).toBeInTheDocument();
+  expect(emptyDiv.textContent).toBe('');
 });

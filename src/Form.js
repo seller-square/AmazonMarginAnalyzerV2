@@ -3,7 +3,8 @@ import './index.css';
 // import Header from './header';
 
 function Form() {
- // const [easyShipPrimeTable, seteasyShipPrimeTable] = useState(false);
+  // const[para,setPara] = useState(false);
+  // const [easyShipPrimeTable, seteasyShipPrimeTable] = useState(false);
   const [showAdditionalShippingCost, setShowAdditionalShippingCost] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [formValues, setFormValues] = useState({
@@ -80,7 +81,9 @@ function Form() {
       payload.height = (formValues.height * 2.54).toString();
     }
 
-
+    if (formValues.shippingOption === "Easy Ship Prime") {
+      payload.shippingOption = "Easy Ship";
+    }
     try {
       const response = await fetch(`https://marginanalyse.azurewebsites.net/api/marginv1?costPrice=${payload.costPrice}&sellingPrice=${payload.sellingPrice}&gstRate=${payload.gstRate}&discount=${payload.discount}&length=${payload.length}&breadth=${payload.breadth}&height=${payload.height}&packingWeight=${payload.packingWeight}&categoryUnit=${payload.categoryUnit}&tierUnit=${payload.tierUnit}&shippingOption=${payload.shippingOption}&localShippingCost=${payload.localShippingCost}&regionalShippingCost=${payload.regionalShippingCost}&nationalShippingCost=${payload.nationalShippingCost}`, {
         method: 'POST',
@@ -119,9 +122,14 @@ function Form() {
 
 
     if (name === "shippingOption") {
-      setShowAdditionalShippingCost(value === "Easy Ship");
+      setShowAdditionalShippingCost(value === "Easy Ship" || value === "Easy Ship Prime");
     }
- 
+    // if (name === "shippingOption" && formValues.shippingOption === "Easy Ship Prime") {
+    //   [easyShipPrimeTable, seteasyShipPrimeTable] = true;
+    // }
+
+
+
     if ((name === "sellingPrice" && value <= 80) || (Number(formValues.costPrice) <= 0) || (Number(formValues.packingWeight) <= 0) || (Number(formValues.breadth)) || (Number(formValues.length)) || (Number(formValues.height))) {
       setFormErrors({
         ...formErrors,
@@ -139,7 +147,7 @@ function Form() {
 
   return (
     <div>
-          <div className='productName'>
+      <div className='productName'>
         <h1 className='productDetails'>Product Information</h1>
       </div>
       <form onSubmit={handleSubmit} className='product-form'>
@@ -446,7 +454,7 @@ function Form() {
                 type="radio"
                 name="shippingOption"
                 value="Easy Ship Prime"
-                checked={formValues.shippingOption === "Easy Ship"}
+                checked={formValues.shippingOption === "Easy Ship Prime"}
                 onChange={handleChange}
               />
               <label className="shipmentOptions" htmlFor='easyship'>Easy Ship Prime</label>
@@ -482,38 +490,38 @@ function Form() {
                 <p className='para'>Local</p>
                 <p className='para'>Regional</p>
                 <p className='para'>National</p>
-              </div>           
-                <div className='formFields'>
+              </div>
+              <div className='formFields'>
                 <label className='inputLabels'> Additional Shipping Costs <br /> <p className='sidep'>Seller Shipping Cost If Any</p> </label>
-                  <div className='one'>
-                    <input className='product-form-inputs-5'
-                      name="localShippingCost"
-                      type="number"
-                      placeholder="&#8377;"
-                      value={formValues.localShippingCost}
-                      onChange={handleChange}
-                    />
+                <div className='one'>
+                  <input className='product-form-inputs-5'
+                    name="localShippingCost"
+                    type="number"
+                    placeholder="&#8377;"
+                    value={formValues.localShippingCost}
+                    onChange={handleChange}
+                  />
 
 
-                    <input className='product-form-inputs-5'
-                      name="regionalShippingCost"
-                      type="number"
-                      placeholder="&#8377;"
-                      value={formValues.regionalShippingCost}
-                      onChange={handleChange}
-                    />
+                  <input className='product-form-inputs-5'
+                    name="regionalShippingCost"
+                    type="number"
+                    placeholder="&#8377;"
+                    value={formValues.regionalShippingCost}
+                    onChange={handleChange}
+                  />
 
-                    <input className='product-form-inputs-5'
-                      name="nationalShippingCost"
-                      type="number"
-                      placeholder="&#8377;"
-                      value={formValues.nationalShippingCost}
-                      onChange={handleChange}
-                    />
-                  </div>
+                  <input className='product-form-inputs-5'
+                    name="nationalShippingCost"
+                    type="number"
+                    placeholder="&#8377;"
+                    value={formValues.nationalShippingCost}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
-           
+            </div>
+
 
 
           ) : null
@@ -523,8 +531,10 @@ function Form() {
       <div>
         {submitted &&
           <div className='tableWrapper'>
-            <p className='tableHeading'><b>Amazon Margin Analysis for Self Ship Order</b></p>
-
+            {formValues.shippingOption !=="Easy Ship Prime" &&
+            <p className='tableHeading'><b>Amazon Margin Analysis for Self Ship Order</b></p>}
+            {formValues.shippingOption === "Easy Ship Prime" &&
+              <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by Non Prime Customers</b></p>}
             <div>
               <table className="tableTwo ">
                 <thead className='tableHeader'>
@@ -544,14 +554,14 @@ function Form() {
                     <td><span>&#8377;</span>{formData.item_selling_price_local}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_regional}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
-                    <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
+                    <td><span>&#8377;</span>{formData.item_selling_price_average}</td>
                   </tr>
                   <tr className="tableTwoRow3">
                     <td>Nett Settlement</td>
                     <td><span>&#8377;</span>{formData.Nett_Settlment_Local}</td>
                     <td><span>&#8377;</span>{formData.Nett_Settlment_Regional}</td>
                     <td><span>&#8377;</span>{formData.Nett_Settlment_National}</td>
-                    <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
+                    <td><span>&#8377;</span>{formData.Average_net_settlement}</td>
                   </tr>
                   <tr className="tableTwoRow5">
                     <td>Margin on SP</td>
@@ -595,6 +605,7 @@ function Form() {
                     <th>Local</th>
                     <th>Regional</th>
                     <th>National</th>
+                    <th>Average</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -605,16 +616,16 @@ function Form() {
                     <td><span>&#8377;</span>{formData.item_selling_price_local}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_regional}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
-                    <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
+                    <td><span>&#8377;</span>{formData.item_selling_price_average}</td>
 
                   </tr>
                   <tr className="tableTwoRow3">
                     <td>Nett Settlement</td>
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_local}</td>
-                    <td><span>&#8377;</span>{formData.non_prime_net_settlement_regionall}</td>
+                    <td><span>&#8377;</span>{formData.non_prime_net_settlement_regional}</td>
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_national}</td>
-                    <td>{formData.non_prime_net_settlement_national}</td>
-                    
+                    <td>{formData.Average_non_prime_net_settlement}</td>
+
 
 
                   </tr>

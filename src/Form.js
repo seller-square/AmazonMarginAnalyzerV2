@@ -534,7 +534,7 @@ function Form() {
             {formValues.shippingOption !=="Easy Ship Prime" &&
             <p className='tableHeading'><b>Amazon Margin Analysis for Self Ship Order</b></p>}
             {formValues.shippingOption === "Easy Ship Prime" &&
-              <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by Non Prime Customers</b></p>}
+              <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by Prime Customers</b></p>}
             <div>
               <table className="tableTwo ">
                 <thead className='tableHeader'>

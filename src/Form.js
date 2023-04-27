@@ -275,7 +275,6 @@ function Form() {
               <option value="Apparel - Sarees  & Dress Materials">Apparel - Sarees and Dress Materials</option>
               <option value="Apparel - Sweat Shirts and Jackets">Apparel - Sweat Shirts and Jackets</option>
               <option value="Apparel - Other Innerwear">Apparel - Other Innerwear</option>
-              <option value="Apparel - Men's T-shirts (except Polos, Tank tops and full sleeve tops)">Apparel - Men's T-shirts (except Polos, Tank tops and full sleeve tops)</option>
               <option value="Apparel - Womens' Innerwear and Lingerie">Apparel - Womens' Innerwear and Lingerie</option>
               <option value="Apparel - Men's T-Shirts (Excluding Tank Tops and Full Sleeve Tops)">Apparel - Men's T-Shirts (Excluding Tank Tops and Full Sleeve Tops)</option>
               <option value="Apparel - Sleepwear">Apparel - Sleepwear</option>
@@ -486,38 +485,53 @@ function Form() {
         {
           showAdditionalShippingCost ? (
             <div id='additionalShippingCost' className='additionalShippingCost'>
-              <div className='titles'>
+
+              {/* <div className='titles'>
                 <p className='para'>Local</p>
                 <p className='para'>Regional</p>
                 <p className='para'>National</p>
-              </div>
+              </div> */}
               <div className='formFields'>
                 <label className='inputLabels'> Additional Shipping Costs <br /> <p className='sidep'>Seller Shipping Cost If Any</p> </label>
-                <div className='one'>
-                  <input className='product-form-inputs-5'
-                    name="localShippingCost"
-                    type="number"
-                    placeholder="&#8377;"
-                    value={formValues.localShippingCost}
-                    onChange={handleChange}
-                  />
-
-
-                  <input className='product-form-inputs-5'
-                    name="regionalShippingCost"
-                    type="number"
-                    placeholder="&#8377;"
-                    value={formValues.regionalShippingCost}
-                    onChange={handleChange}
-                  />
-
-                  <input className='product-form-inputs-5'
-                    name="nationalShippingCost"
-                    type="number"
-                    placeholder="&#8377;"
-                    value={formValues.nationalShippingCost}
-                    onChange={handleChange}
-                  />
+                <div className='four'>
+                  <div className='three'>
+                    <div>
+                      <label className='ship'>Local</label>
+                      <div>
+                        <input className='product-form-inputs-5'
+                          name="localShippingCost"
+                          type="number"
+                          placeholder="&#8377;"
+                          value={formValues.localShippingCost}
+                          onChange={handleChange}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <label className='ship'>Regional</label>
+                    <div>
+                      <input className='product-form-inputs-5'
+                        name="regionalShippingCost"
+                        type="number"
+                        placeholder="&#8377;"
+                        value={formValues.regionalShippingCost}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label className='ship'>National</label>
+                    <div>
+                      <input className='product-form-inputs-5'
+                        name="nationalShippingCost"
+                        type="number"
+                        placeholder="&#8377;"
+                        value={formValues.nationalShippingCost}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -531,8 +545,8 @@ function Form() {
       <div>
         {submitted &&
           <div className='tableWrapper'>
-            {formValues.shippingOption !=="Easy Ship Prime" &&
-            <p className='tableHeading'><b>Amazon Margin Analysis for Self Ship Order</b></p>}
+            {formValues.shippingOption !== "Easy Ship Prime" &&
+              <p className='tableHeading'><b>Amazon Margin Analysis for {formValues.shippingOption} Order</b></p>}
             {formValues.shippingOption === "Easy Ship Prime" &&
               <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by Prime Customers</b></p>}
             <div>
@@ -554,7 +568,7 @@ function Form() {
                     <td><span>&#8377;</span>{formData.item_selling_price_local}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_regional}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
-                    <td><span>&#8377;</span>{formData.item_selling_price_average}</td>
+                    <td><span>&#8377;</span>{formData.Average_selling_price}</td>
                   </tr>
                   <tr className="tableTwoRow3">
                     <td>Nett Settlement</td>
@@ -616,7 +630,7 @@ function Form() {
                     <td><span>&#8377;</span>{formData.item_selling_price_local}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_regional}</td>
                     <td><span>&#8377;</span>{formData.item_selling_price_national}</td>
-                    <td><span>&#8377;</span>{formData.item_selling_price_average}</td>
+                    <td><span>&#8377;</span>{formData.Average_selling_price}</td>
 
                   </tr>
                   <tr className="tableTwoRow3">

@@ -582,20 +582,20 @@ function Form() {
                     <td>{formData.Margin_on_sp_local}%</td>
                     <td>{formData.Margin_on_sp_regional}%</td>
                     <td>{formData.Margin_on_sp_national}%</td>
-                    <td><span>&#8377;</span>{formData.Average_margin_on_sp}</td>
+                    <td>{formData.Average_margin_on_sp}%</td>
                   </tr>
                   <tr className="tableTwoRow6">
                     <td>Margin on Settlement</td>
                     <td>{formData.margin_on_settlement_local}%</td>
                     <td>{formData.margin_on_settlement_regional}%</td>
                     <td>{formData.margin_on_settlement_national}%</td>
-                    <td><span>&#8377;</span>{formData.average_margin_on_settlement}</td>
+                    <td>{formData.average_margin_on_settlement}%</td>
                   </tr>
                   <tr className="tableTwoRow6">
                     <td>Profit</td>
-                    <td>{formData.Profit_local}%</td>
-                    <td>{formData.Profit_regional}%</td>
-                    <td>{formData.Profit_national}%</td>
+                    <td><span>&#8377;</span>{formData.Profit_local}</td>
+                    <td><span>&#8377;</span>{formData.Profit_regional}</td>
+                    <td><span>&#8377;</span>{formData.Profit_national}</td>
                     <td><span>&#8377;</span>{formData.Average_profit}</td>
                   </tr>
 
@@ -638,7 +638,7 @@ function Form() {
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_local}</td>
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_regional}</td>
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_national}</td>
-                    <td>{formData.Average_non_prime_net_settlement}</td>
+                    <td><span>&#8377;</span>{formData.Average_non_prime_net_settlement}</td>
 
 
 
@@ -661,9 +661,9 @@ function Form() {
                   </tr>
                   <tr className="tableTwoRow6">
                     <td>Profit</td>
-                    <td>{formData.non_prime_profit_local}%</td>
-                    <td>{formData.non_prime_profit_regional}%</td>
-                    <td>{formData.non_prime_profit_national}%</td>
+                    <td><span>&#8377;</span>{formData.non_prime_profit_local}</td>
+                    <td><span>&#8377;</span>{formData.non_prime_profit_regional}</td>
+                    <td><span>&#8377;</span>{formData.non_prime_profit_national}</td>
                     <td><span>&#8377;</span>{formData.non_prime_average_profit}</td>
 
                   </tr>

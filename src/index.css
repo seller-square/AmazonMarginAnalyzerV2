@@ -573,6 +573,7 @@ margin-bottom: 10px; */
 @media (max-width: 768px) {
   .formFields{
     margin-top: 0px;
+    margin-left: -20px;
   }
   .product-form-input {
     flex: 1;

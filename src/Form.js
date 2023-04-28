@@ -109,6 +109,9 @@ function Form() {
       [e.target.name]: e.target.value,
     });
     setSubmitted(true);
+    const target = document.getElementById('tableWrapper');
+    target.scrollIntoView({ behavior: 'smooth' });
+
   };
 
   const handleChange = (e) => {
@@ -157,13 +160,14 @@ function Form() {
             <input className='product-form-input' type="text" id="costPrice" name="costPrice" value={formValues.costPrice} placeholder="&#8377;" onChange={handleChange} required />
           </div>
         </div>
-        <div className='formFields'>
+              <div className='formFields'>
           <label className='inputLabels' >Product Selling Price <br /> <p className='sidep'>Including GST</p></label>
           <div className=''>
             <input className='product-form-input' type="text" id="sellingPrice" name="sellingPrice" value={formValues.sellingPrice} placeholder="&#8377;" onChange={handleChange} required />
           </div>
         </div>
-        <br></br>
+                <br></br>
+                <div className='gst-col'>
         <div className='formFields'>
           <label className='inputLabels' >Product GST <br /> <p className='sidep'>GST Rate</p></label>
           <div className=''>
@@ -174,6 +178,7 @@ function Form() {
               <option value="0.18">18%</option>
               <option value="0.28">28%</option>
             </select>
+          </div>
           </div>
         </div>
         <div className='formFields'>
@@ -214,7 +219,7 @@ function Form() {
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels'>Packaging Weight<br /> <p className='sidep'>Net Weight</p></label>
+          <label className='inputLabels'>Packaging Weight<br /> <p className='sidep'>Nett Weight</p></label>
 
           <div className='one'>
             <select className='measurementDimensions' id='weightDimensions'
@@ -436,7 +441,7 @@ function Form() {
                 checked={formValues.shippingOption === "Self Ship"}
                 onChange={handleChange}
               />
-              <label htmlFor="Self Ship">Self ship</label>
+              <label className="shipmentOptions" htmlFor="Self Ship">Self ship</label>
             </div>
             <div>
               <input className='radio-item'
@@ -544,11 +549,11 @@ function Form() {
       </form >
       <div>
         {submitted &&
-          <div className='tableWrapper'>
+          <div className='tableWrapper' id='tableWrapper'>
             {formValues.shippingOption !== "Easy Ship Prime" &&
-              <p className='tableHeading'><b>Amazon Margin Analysis for {formValues.shippingOption} Order</b></p>}
+              <p className='tableHeading'><b>Amazon Margin Analysis for {formValues.shippingOption} Order </b></p>}
             {formValues.shippingOption === "Easy Ship Prime" &&
-              <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by Prime Customers</b></p>}
+              <p className='tableHeading'><b>Amazon Margin Analysis for Easy Ship Prime Express Orders by All Customers</b></p>}
             <div>
               <table className="tableTwo ">
                 <thead className='tableHeader'>
@@ -582,20 +587,20 @@ function Form() {
                     <td>{formData.Margin_on_sp_local}%</td>
                     <td>{formData.Margin_on_sp_regional}%</td>
                     <td>{formData.Margin_on_sp_national}%</td>
-                    <td>{formData.Average_margin_on_sp}%</td>
+                    <td><span>&#8377;</span>{formData.Average_margin_on_sp}</td>
                   </tr>
                   <tr className="tableTwoRow6">
                     <td>Margin on Settlement</td>
                     <td>{formData.margin_on_settlement_local}%</td>
                     <td>{formData.margin_on_settlement_regional}%</td>
                     <td>{formData.margin_on_settlement_national}%</td>
-                    <td>{formData.average_margin_on_settlement}%</td>
+                    <td><span>&#8377;</span>{formData.average_margin_on_settlement}</td>
                   </tr>
                   <tr className="tableTwoRow6">
                     <td>Profit</td>
-                    <td><span>&#8377;</span>{formData.Profit_local}</td>
-                    <td><span>&#8377;</span>{formData.Profit_regional}</td>
-                    <td><span>&#8377;</span>{formData.Profit_national}</td>
+                    <td>{formData.Profit_local}%</td>
+                    <td>{formData.Profit_regional}%</td>
+                    <td>{formData.Profit_national}%</td>
                     <td><span>&#8377;</span>{formData.Average_profit}</td>
                   </tr>
 
@@ -638,7 +643,7 @@ function Form() {
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_local}</td>
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_regional}</td>
                     <td><span>&#8377;</span>{formData.non_prime_net_settlement_national}</td>
-                    <td><span>&#8377;</span>{formData.Average_non_prime_net_settlement}</td>
+                    <td>{formData.Average_non_prime_net_settlement}</td>
 
 
 
@@ -661,9 +666,9 @@ function Form() {
                   </tr>
                   <tr className="tableTwoRow6">
                     <td>Profit</td>
-                    <td><span>&#8377;</span>{formData.non_prime_profit_local}</td>
-                    <td><span>&#8377;</span>{formData.non_prime_profit_regional}</td>
-                    <td><span>&#8377;</span>{formData.non_prime_profit_national}</td>
+                    <td>{formData.non_prime_profit_local}%</td>
+                    <td>{formData.non_prime_profit_regional}%</td>
+                    <td>{formData.non_prime_profit_national}%</td>
                     <td><span>&#8377;</span>{formData.non_prime_average_profit}</td>
 
                   </tr>

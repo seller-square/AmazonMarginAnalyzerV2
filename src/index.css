@@ -379,24 +379,18 @@ input::placeholder {
 }
 
 .radio {
-  display: flex;
-  margin-left: 25px;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.radioButons {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-row-gap: 0px;
+  align-items: center;
 }
 
 .radio-item {
-  float: left;
-  flex: 1 0 33%;
+  /* margin-right: 5px; */
 }
 
-.radio-item:last-child {
-  flex-grow: 0;
-}
+
+
 
 #add {
   font-family: Helvetica;
@@ -413,7 +407,7 @@ input::placeholder {
 }
 
 .shipmentOptions {
-  width: 30%;
+  width: 100%;
   height: 2.5rem;
 }
 
@@ -461,6 +455,7 @@ table th {
   font-size: 16px; 
   line-height: 22px; 
   color: #565E6CFF;
+  text-align: center;
 }
 /* table tbody tr:nth-child(odd) {
   background-color: #f9f9f9;
@@ -587,7 +582,13 @@ margin-bottom: 10px; */
     border-radius: 5px;
     
   }
-  
+  .productDetails{
+    text-align: center;
+    font-size: 22px;
+  }
+  .header{
+    width: 120%;
+  }
   .product-form-input-2 {
     flex: 1;
     width: 250px;
@@ -710,9 +711,7 @@ margin-bottom: 10px; */
 .shipmentOptions {
   margin-left: 5px;
 }
-.productDetails{
-  margin-left: -10px;
-}
+
 .sidep{
   margin-bottom: 0px;
   font-size: 14px;

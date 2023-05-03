@@ -14,7 +14,14 @@ body {
   background-size: cover;
 }
 
-
+.wa-chat-bubble-close-btn img{
+  margin-left: 40px;
+  margin-right: -10px;
+  margin-top: -10px;
+  padding: 10px 10px 10px 10px;
+  width: 15px;
+  height: 15px;
+  }
 
 code {
   font-family: Helvetica;

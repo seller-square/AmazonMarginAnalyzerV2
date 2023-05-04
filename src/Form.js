@@ -72,7 +72,7 @@ function Form() {
     }
 
     // discount conversion 
-    if (formValues.percentOrValue === "value") {
+    if (formValues.percentOrValue === "percentValue") {
       payload.discount = (formValues.sellingPrice * formValues.discount / 100).toString();
     }
     if (formValues.measurementDimensions === "inch") {

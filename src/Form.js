@@ -455,6 +455,7 @@ setShowPopupTwo(false);
                 value="Self Ship"
                 checked={formValues.shippingOption === "Self Ship"}
                 onChange={handleChange}
+ required
               />
               <label className="shipmentOptions" htmlFor="Self Ship">Self ship</label>
             </div>
@@ -465,6 +466,7 @@ setShowPopupTwo(false);
                 value="Easy Ship"
                 checked={formValues.shippingOption === "Easy Ship"}
                 onChange={handleChange}
+ required
               />
               <label className="shipmentOptions" htmlFor='easyshipprime'>Easy Ship</label>
             </div>
@@ -476,6 +478,7 @@ setShowPopupTwo(false);
                 value="FBA"
                 checked={formValues.shippingOption === "FBA"}
                 onChange={handleChange}
+ required
               />
               <label className="shipmentOptions" htmlFor='FBA'>FBA</label>
             </div>
@@ -486,6 +489,7 @@ setShowPopupTwo(false);
                 value="Easy Ship Prime"
                 checked={formValues.shippingOption === "Easy Ship Prime"}
                 onChange={handleChange}
+ required
               />
               <label className="shipmentOptions" htmlFor='easyship'>Easy Ship Prime</label>
             </div>
@@ -496,6 +500,7 @@ setShowPopupTwo(false);
                 value="Seller Flex"
                 checked={formValues.shippingOption === "Seller Flex"}
                 onChange={handleChange}
+ required
               />
               <label htmlFor='sellerflex'>Seller Flex</label>
             </div>

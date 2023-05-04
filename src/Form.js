@@ -263,8 +263,7 @@ setShowPopupTwo(false);
               <option value="Video Games - Accessories">Video Games - Accessories</option>
               <option value="Video Games - Online game services">Video Games - Online game services</option>
               <option value="Video Games - Other Products">Video Games - Other Products</option>
-              <option value="Toys - Other Products
-          ">Toys - Other Products</option>
+              <option value="Toys - Other Products">Toys - Other Products</option>
               <option value="Toys - Drones">Toys - Drones</option>
               <option value="Toys - Balloons and Soft Toys">Toys - Balloons and Soft Toys</option>
               <option value="Pet - Other Products">Pet - Other Products</option>

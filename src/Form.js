@@ -117,7 +117,7 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if ((name === "costPrice" && value <= 0)|| (name=== "sellingPrice" && value <= 0)||(name=== "length" && value <= 0)||(name=== "breadth" && value <= 0)|| (name=== "height" && value <= 0)||(name=== "packingWeight" && value <= 0)||(name=== "discount" && value <= 0)) {
+    if ((name === "costPrice" && value <= 0)|| (name=== "sellingPrice" && value <= 0)||(name=== "length" && value <= 0)||(name=== "breadth" && value <= 0)|| (name=== "height" && value <= 0)||(name=== "packingWeight" && value <= 0)||(name=== "discount" && value < 0)) {
       setShowPopup(true);
     } else {
       setShowPopup(false);

@@ -117,7 +117,7 @@ function Form() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if ((name === "costPrice" && value <= 0)|| (name=== "sellingPrice" && value <= 0)||(name=== "length" && value <= 0)||(name=== "breadth" && value <= 0)|| (name=== "height" && value <= 0)||(name=== "packingWeight" && value <= 0)||(name=== "discount" && value < 0)) {
+    if ((name === "costPrice" && value <= 0)|| (name=== "sellingPrice" && value <= 0)||(name=== "length" && value <= 0)||(name=== "breadth" && value <= 0)|| (name=== "height" && value <= 0)||(name=== "packingWeight" && value <= 0)||(name=== "discount" && value <= 0)) {
       setShowPopup(true);
     } else {
       setShowPopup(false);
@@ -255,7 +255,7 @@ setShowPopupTwo(false);
             <select className='' id="categoryUnit" name="categoryUnit" value={formValues.categoryUnit} onChange={handleChange} required>
               <option value="">Select Product Category</option>
               <option value="Books">Books</option>
-              <option value="Software Products">Software Products</option>
+              <option value="Software products">Software products</option>
               <option value="Movies">Movies</option>
               <option value="Music">Music</option>
               <option value="Video Games">Video Games</option>
@@ -267,7 +267,7 @@ setShowPopupTwo(false);
               <option value="Toys - Drones">Toys - Drones</option>
               <option value="Toys - Balloons and Soft Toys">Toys - Balloons and Soft Toys</option>
               <option value="Pet - Other Products">Pet - Other Products</option>
-              <option value="Beauty Haircare, Bath and Shower">Beauty Haircare, Bath and Shower</option>
+              <option value="Beauty - Haircare, Bath and Shower">Beauty Haircare, Bath and Shower</option>
               <option value="Beauty - Make-up">Beauty - Make-up</option>
               <option value="Beauty - Other Products">Beauty - Other Products</option>
               <option value="Deodorants">Deodorants</option>
@@ -280,8 +280,7 @@ setShowPopupTwo(false);
               <option value="Health and Personal Care - Other Household Supplies">Health and Personal Care - Other Household Supplies</option>
               <option value="Health and Personal Care - Contact lens and reading glasses">Health and Personal Care - Contact lens and reading glasses</option>
               <option value="Health and Personal Care - Other Products">Health and Personal Care - Other Products</option>
-              <option value="Baby Hardlines - Swings, Bouncers and Rockers, Carriers, Walkers, Baby Safety - Guards and Locks, Baby Room Décor, Baby Furniture, Baby Car Seats and Accessories, Baby Strollers, Buggies and Prams">Baby Hardlines - Swings, Bouncers and Rockers, Carriers, Walkers, Baby Safety - Guards and Locks, Baby Room Décor, Baby Furniture, Baby Car Seats and Accessories, Baby Strollers, Buggies and Prams</option>
-              <option value="Baby - Other Products">Baby - Other ProductsLuxury Beauty</option>
+              <option value="Baby Hardlines">Baby Hardlines</option>     
               <option value="Grocery and Gourmet - Other Products">Grocery and Gourmet - Other Products</option>
               <option value="Grocery and Gourmet - Hampers and gifting">Grocery and Gourmet - Hampers and gifting</option>
               <option value="Weighing Scales & Fat Analysers">Weighing Scales & Fat Analysers</option>
@@ -294,10 +293,10 @@ setShowPopupTwo(false);
               <option value="Apparel - Sarees  & Dress Materials">Apparel - Sarees and Dress Materials</option>
               <option value="Apparel - Sweat Shirts and Jackets">Apparel - Sweat Shirts and Jackets</option>
               <option value="Apparel - Other Innerwear">Apparel - Other Innerwear</option>
-              <option value="Apparel - Womens' Innerwear and Lingerie">Apparel - Womens' Innerwear and Lingerie</option>
+              <option value="Apparel - Women's Innerwear and Lingerie">Apparel - Women's Innerwear and Lingerie</option>
               <option value="Apparel - Men's T-Shirts (Excluding Tank Tops and Full Sleeve Tops)">Apparel - Men's T-Shirts (Excluding Tank Tops and Full Sleeve Tops)</option>
               <option value="Apparel - Sleepwear">Apparel - Sleepwear</option>
-              <option value="Apparel Accessories">Apparel Accessories</option>
+              <option value="Apparel - Accessories">Apparel - Accessories</option>
               <option value="Apparel - Ethnic Wear">Apparel - Ethnic Wear</option>
               <option value="Apparel - Baby">Apparel - Baby</option>
               <option value="Apparel - Shorts">Apparel - Shorts</option>
@@ -307,11 +306,11 @@ setShowPopupTwo(false);
               <option value="Fashion Smartwatches">Fashion Smartwatches</option>
               <option value="Shoes">Shoes</option>
               <option value="Flip Flops, Fashion Sandals and Slippers">Flip Flops, Fashion Sandals and Slippers</option>
-              <option value="Kids footwear">Kids footwear</option>
+              <option value="Kids Shoes">Kids footwear</option>
               <option value="Handbags">Handbags</option>
               <option value="Wallets">Wallets</option>
               <option value="Backpacks">Backpacks</option>
-              <option value="Luggage - Suitcase and Trolleys">Luggage - Suitcase and Trolleys</option>
+              <option value="Luggage - Suitcase & Trolleys">Luggage - Suitcase & Trolleys</option>
               <option value="Luggage - Travel Accessories">Luggage - Travel Accessories</option>
               <option value="Luggage - Other Products">Luggage - Other Products</option>
               <option value="Fashion Jewellery">Fashion Jewellery</option>
@@ -333,9 +332,8 @@ setShowPopupTwo(false);
 
 
               <option value="Carpets, Bedsheets, Blankets and covers">Carpets, Bedsheets, Blankets and covers</option>
-              <option value="Containers, Boxes, Bottles and Kitchen Storage">Containers, Boxes, Bottles and Kitchen Storage</option>
               <option value="Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage">Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)</option>
-              <option value="Home - Waste & Recycling">Home - Waste & Recycling</option>
+              <option value="Home - Waste and Recycling">Home - Waste and Recycling</option>
               <option value="Home - Other Products">Home - Other Products</option>
               <option value="Craft Materials">Craft Materials</option>
               <option value="Wallpapers & Wallpaper Accessories">Wallpapers & Wallpaper Accessories</option>
@@ -353,17 +351,17 @@ setShowPopupTwo(false);
               <option value="Cushion Covers">Cushion Covers</option>
               <option value="Slipcovers and Kitchen Linens">Slipcovers and Kitchen Linens</option>
               <option value="Lawn & Garden - Commercial Agricultural Products">Lawn & Garden - Commercial Agricultural Products</option>
-              <option value="Lawn & Garden - Solar Devices , Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets">Lawn & Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets</option>
+              <option value="Lawn & Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets">Lawn & Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets</option>
               <option value="Lawn & Garden - Chemical Pest Control, Mosquito nets, Bird control, Plant protection, Foggers">Lawn & Garden - Chemical Pest Control, Mosquito Netts, Bird control, Plant protection, Foggers</option>
-              <option value="Lawn & Garden - Outdoor equipments (Saws, Lawn Mowers, Cultivator, Tiller, String Trimmers, Water Pumps, Generators, Barbeque Grills, Greenhouses)">Lawn & Garden - Outdoor equipments (Saws, Lawn Mowers, Cultivator, Tiller, String Trimmers, Water Pumps, Generators, Barbeque Grills, Greenhouses)</option>
+              <option value="Lawn and Garden - Outdoor Equipment">Lawn and Garden - Outdoor Equipment</option>
               <option value="Lawn and Garden - Other Products">Lawn and Garden - Other Products</option>
               <option value="Lawn and Garden - Plants, Seeds, Bulbs and gardening tools">Lawn and Garden - Plants, Seeds, Bulbs and gardening tools</option>
 
-              <option value="Automotive - Tyres and Rims">Automotive - Tyres and Rims</option>
-              <option value="Automotive - Helmets, Oils and Lubricants, Batteries, Pressure washer, Vacuum cleaner, Air Freshener, Air purifiers and Vehicle Tools">Automotive - Helmets, Oils & Lubricants, Batteries, Pressure washer, Vacuum cleaner, Air Freshener, Air purifiers and Vehicle Tools</option>
+              <option value="Automotive - Tyres & Rims">Automotive - Tyres & Rims</option>
+              <option value="Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools">Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools</option>
               <option value="Automotive Accessories - Floor Mats, Seat, Car, Bike Covers">Automotive Accessories - Floor Mats, Seat/Car/Bike Covers</option>
-              <option value="Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicles">Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicles</option>
-              <option value="Automotive - Car and Bike parts, Brakes, Styling and Body fittings, Transmission, Engine parts, Exhaust Systems, Interior Fitting, Suspension Wipers">Automotive - Car and Bike parts, Brakes, Styling and body fittings, Transmission, Engine parts, Exhaust systems, Interior fitting, Suspension and Wipers</option>
+              <option value="Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicle">Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicle</option>
+              <option value="Automotive - Car and Bike parts, Brakes, Styling and Body Fittings, Transmission, Engine parts, Exhaust Systems, Interior Fitting, Suspension, Wipers">Automotive - Car and Bike parts, Brakes, Styling and Body Fittings, Transmission, Engine parts, Exhaust Systems, Interior Fitting, Suspension, Wipers</option>
               <option value="Automotive - Cleaning Kits, Sponges, Brush, Duster, Cloths and Liquids, Car Interior and Exterior Care, Waxes, Polish, Shampoo, Car and Bike, Lighting and Paints">Automotive - Cleaning Kits, Sponges, Brush, Duster, Cloths and Liquids, Car Interior and Exterior Care, Waxes, Polish, Shampoo, Car and Bike, Lighting and Paints</option>
               <option value="Automotive - Other Products">Automotive - Other Products</option>
               <option value="Major Appliances Accessories">Major Appliances Accessories</option>
@@ -373,7 +371,7 @@ setShowPopupTwo(false);
               <option value="Mattresses">Mattresses</option>
               <option value="Furniture - Other Products">Furniture - Other Products</option>
 
-              <option value="Bean Bags and Inflatables">Bean Bags and Inflatables</option>
+              <option value="Bean Bags & Inflatables">Bean Bags & Inflatables</option>
               <option value="Business and Industrial Supplies - Scientific Supplies">Business and Industrial Supplies - Scientific Supplies
               </option>
               <option value="Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, 3D Printer, Thermal Printers, Barcode Scanners">Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, 3D Printer, Thermal Printers, Barcode Scanners</option>
@@ -394,8 +392,8 @@ setShowPopupTwo(false);
               <option value="Mobile Phones">Mobile Phones</option>
               <option value="Tablets">Tablets</option>
               <option value="Laptops">Laptops</option>
-              <option value="Scanners and Printers">Scanners and Printers</option>
-              <option value="PC Components - RAM, Motherboards">PC Components - RAM, Motherboards</option>
+              <option value="Scanners & Printers">Scanners & Printers</option>
+              <option value="PC Components - RAM & Motherboards">PC Components - RAM & Motherboards</option>
               <option value="Desktops">Desktops</option>
               <option value="Monitors">Monitors</option>
               <option value="Laptop & Camera Battery">Laptop & Camera Battery</option>
@@ -404,10 +402,10 @@ setShowPopupTwo(false);
               <option value="Hard Disks">Hard Disks</option>
               <option value="Kindle Accessories">Kindle Accessories</option>
               <option value="Memory Cards">Memory Cards</option>
-              <option value="Modems & Nettworking Devices">Modems & Nettworking Devices</option>
+              <option value="Modems & Networking Device">Modems & Networking Device</option>
               <option value="Car Electronics Devices">Car Electronics Devices</option>
               <option value="Car Electronics Accessories">Car Electronics Accessories</option>
-              <option value="Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses and Accessories, GPS Devices, Speakers)">Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses and Accessories, GPS Devices, Speakers)</option>
+              <option value="Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices, Speakers)">Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices, Speakers)</option>
               <option value="Landline Phones">Landline Phones</option>
               <option value="Smart Watches & Accessories">Smart Watches & Accessories</option>
               <option value="Television">Television</option>
@@ -416,7 +414,7 @@ setShowPopupTwo(false);
               <option value="Camera Accessories">Camera Accessories</option>
               <option value="GPS Devices">GPS Devices</option>
               <option value="Speakers">Speakers</option>
-              <option value="Headsets, Headphones and Earphones">Headsets, Headphones and Earphones</option>
+              <option value="Headsets, Headphones & Earphones">Headsets, Headphones & Earphones</option>
               <option value="Computer & Laptop - Keyboards & Mouse">Computer & Laptop - Keyboards & Mouse</option>
               <option value="Power Banks & Chargers">Power Banks & Chargers</option>
               <option value="Accessories - Electronics, PC & Wireless">Accessories - Electronics, PC & Wireless</option>

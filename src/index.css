@@ -491,11 +491,11 @@ input::placeholder {
 /* table CSS */
 table {
   border-collapse: collapse;
-  width: 45%;
+  width: 43%;
   margin-top: 2rem;
   margin-bottom: 2rem;
   align-items: left;
-  margin-left: 28%;
+  margin-left: 25%;
   margin-right: 25%;
 }
 
@@ -576,7 +576,7 @@ table tbody tr:hover {
 }
 
 .tableHeading {
-  margin-left: 30%;
+  margin-left: 35%;
   width: 712px;
   font-family: Helvetica;
   font-size: 25px;

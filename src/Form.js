@@ -306,7 +306,7 @@ setShowPopupTwo(false);
               <option value="Fashion Smartwatches">Fashion Smartwatches</option>
               <option value="Shoes">Shoes</option>
               <option value="Flip Flops, Fashion Sandals and Slippers">Flip Flops, Fashion Sandals and Slippers</option>
-              <option value="Kids Shoes">Kids footwear</option>
+              <option value="Kids Shoes">Kids Shoes</option>
               <option value="Handbags">Handbags</option>
               <option value="Wallets">Wallets</option>
               <option value="Backpacks">Backpacks</option>

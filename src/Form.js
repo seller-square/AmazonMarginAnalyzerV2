@@ -255,8 +255,9 @@ setShowPopupTwo(false);
             <select className='' id="categoryUnit" name="categoryUnit" value={formValues.categoryUnit} onChange={handleChange} required>
               <option value="">Select Product Category</option>
               <option value="Books">Books</option>
+              <option value="Movies">Movies</option>     
               <option value="Software products">Software products</option>
-              <option value="Movies">Movies</option>
+              <option value="School Textbook Bundles">School Textbook Bundles</option>
               <option value="Music">Music</option>
               <option value="Video Games">Video Games</option>
               <option value="Video Games - Consoles">Video Games - Consoles</option>
@@ -277,7 +278,7 @@ setShowPopupTwo(false);
               <option value="Health and Personal Care - Medical Equipment">Health and Personal Care - Medical Equipment</option>
               <option value="Health and Personal Care - Nutrition">Health and Personal Care - Nutrition</option>
               <option value="Health and Personal Care - Ayurvedic products, Oral care, hand sanitisers, Pooja supplies">Health and Personal Care - Ayurvedic products, Oral care, hand sanitisers, Pooja supplies</option>
-              <option value="Health and Personal Care - Other Household Supplies">Health and Personal Care - Other Household Supplies</option>
+              <option value="Health and Personal Care - Other household supplies">Health and Personal Care - Other household supplies</option>
               <option value="Health and Personal Care - Contact lens and reading glasses">Health and Personal Care - Contact lens and reading glasses</option>
               <option value="Health and Personal Care - Other Products">Health and Personal Care - Other Products</option>
               <option value="Baby Hardlines">Baby Hardlines</option>     
@@ -285,12 +286,12 @@ setShowPopupTwo(false);
               <option value="Grocery and Gourmet - Hampers and gifting">Grocery and Gourmet - Hampers and gifting</option>
               <option value="Weighing Scales & Fat Analysers">Weighing Scales & Fat Analysers</option>
               <option value="Pharmacy - Prescription Medicines">Pharmacy - Prescription Medicines</option>
-              <option value="Personal Care Appliances - Grooming and styling">Personal Care Appliances - Grooming and styling</option>
+              <option value="Personal Care Appliances - Grooming and Styling">Personal Care Appliances - Grooming and Styling</option>
               <option value="Personal Care Appliances - Electric Massagers">Personal Care Appliances - Electric Massagers</option>
               <option value="Personal Care Appliances - Glucometer and Glucometer Strips">Personal Care Appliances - Glucometer and Glucometer Strips</option>
               <option value="Personal Care Appliances - Thermometers">Personal Care Appliances - Thermometers</option>
               <option value="Personal Care Appliances - Other Products">Personal Care Appliances - Other Products</option>
-              <option value="Apparel - Sarees  & Dress Materials">Apparel - Sarees and Dress Materials</option>
+              <option value="Apparel - Sarees & Dress Materials">Apparel - Sarees & Dress Materials</option>
               <option value="Apparel - Sweat Shirts and Jackets">Apparel - Sweat Shirts and Jackets</option>
               <option value="Apparel - Other Innerwear">Apparel - Other Innerwear</option>
               <option value="Apparel - Women's Innerwear and Lingerie">Apparel - Women's Innerwear and Lingerie</option>

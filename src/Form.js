@@ -259,7 +259,7 @@ setShowPopupTwo(false);
               <option value="Software products">Software products</option>
               <option value="School Textbook Bundles">School Textbook Bundles</option>
               <option value="Music">Music</option>
-              <option value="Video Games">Video Games</option>
+             
               <option value="Video Games - Consoles">Video Games - Consoles</option>
               <option value="Video Games - Accessories">Video Games - Accessories</option>
               <option value="Video Games - Online game services">Video Games - Online game services</option>
@@ -333,6 +333,7 @@ setShowPopupTwo(false);
 
 
               <option value="Carpets, Bedsheets, Blankets and covers">Carpets, Bedsheets, Blankets and covers</option>
+              <option value="Containers, Boxes, Bottles and Kitchen Storage">Containers, Boxes, Bottles and Kitchen Storage</option> 
               <option value="Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage">Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)</option>
               <option value="Home - Waste and Recycling">Home - Waste and Recycling</option>
               <option value="Home - Other Products">Home - Other Products</option>
@@ -356,7 +357,7 @@ setShowPopupTwo(false);
               <option value="Lawn & Garden - Chemical Pest Control, Mosquito nets, Bird control, Plant protection, Foggers">Lawn & Garden - Chemical Pest Control, Mosquito Netts, Bird control, Plant protection, Foggers</option>
               <option value="Lawn and Garden - Outdoor Equipment">Lawn and Garden - Outdoor Equipment</option>
               <option value="Lawn and Garden - Other Products">Lawn and Garden - Other Products</option>
-              <option value="Lawn and Garden - Plants, Seeds, Bulbs and gardening tools">Lawn and Garden - Plants, Seeds, Bulbs and gardening tools</option>
+              <option value="Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools">Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools</option>
 
               <option value="Automotive - Tyres & Rims">Automotive - Tyres & Rims</option>
               <option value="Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools">Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools</option>
@@ -403,7 +404,7 @@ setShowPopupTwo(false);
               <option value="Hard Disks">Hard Disks</option>
               <option value="Kindle Accessories">Kindle Accessories</option>
               <option value="Memory Cards">Memory Cards</option>
-              <option value="Modems & Networking Device">Modems & Networking Device</option>
+              <option value="Modems & Networking Devices">Modems & Networking Devices</option>
               <option value="Car Electronics Devices">Car Electronics Devices</option>
               <option value="Car Electronics Accessories">Car Electronics Accessories</option>
               <option value="Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices, Speakers)">Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices, Speakers)</option>

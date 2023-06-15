@@ -99,6 +99,7 @@ function Form() {
 
       const data = await response.json(); // Parse the JSON response
       console.log(data);
+      console.log(payload);
       formData = data;
     } catch (error) {
       console.log(error);

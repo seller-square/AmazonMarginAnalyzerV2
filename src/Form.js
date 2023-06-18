@@ -260,7 +260,6 @@ setShowPopupTwo(false);
               <option value="Software products">Software products</option>
               <option value="School Textbook Bundles">School Textbook Bundles</option>
               <option value="Music">Music</option>
-             
               <option value="Video Games - Consoles">Video Games - Consoles</option>
               <option value="Video Games - Accessories">Video Games - Accessories</option>
               <option value="Video Games - Online game services">Video Games - Online game services</option>
@@ -331,8 +330,6 @@ setShowPopupTwo(false);
               <option value="Wall Art">Wall Art</option>
               <option value="Home Fragrance and Candles">Home Fragrance and Candles</option>
               <option value="Home furnishing">Home furnishing</option>
-
-
               <option value="Carpets, Bedsheets, Blankets and covers">Carpets, Bedsheets, Blankets and covers</option>
               <option value="Containers, Boxes, Bottles and Kitchen Storage">Containers, Boxes, Bottles and Kitchen Storage</option> 
               <option value="Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage">Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)</option>
@@ -342,8 +339,7 @@ setShowPopupTwo(false);
               <option value="Wallpapers & Wallpaper Accessories">Wallpapers & Wallpaper Accessories</option>
               <option value="Home Improvement Accessories">Home Improvement Accessories</option>
               <option value="Safes and Lockers with Locking Mechanism">Safes and Lockers with Locking Mechanism</option>
-              <option value="Home improvement - Kitchen & Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials">Home improvement - Kitchen & Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials
-              </option>
+              <option value="Home improvement - Kitchen & Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials">Home improvement - Kitchen & Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials </option>
               <option value="Ladders">Ladders</option>
               <option value="Home Safety & Security Systems">Home Safety & Security Systems</option>
               <option value="Home Improvement - Other Products">Home Improvement - Other Products</option>
@@ -359,7 +355,6 @@ setShowPopupTwo(false);
               <option value="Lawn and Garden - Outdoor Equipment">Lawn and Garden - Outdoor Equipment</option>
               <option value="Lawn and Garden - Other Products">Lawn and Garden - Other Products</option>
               <option value="Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools">Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools</option>
-
               <option value="Automotive - Tyres & Rims">Automotive - Tyres & Rims</option>
               <option value="Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools">Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools</option>
               <option value="Automotive Accessories - Floor Mats, Seat, Car, Bike Covers">Automotive Accessories - Floor Mats, Seat/Car/Bike Covers</option>
@@ -373,10 +368,8 @@ setShowPopupTwo(false);
               <option value="Major Appliances - Other Products">Major Appliances - Other Products</option>
               <option value="Mattresses">Mattresses</option>
               <option value="Furniture - Other Products">Furniture - Other Products</option>
-
               <option value="Bean Bags & Inflatables">Bean Bags & Inflatables</option>
-              <option value="Business and Industrial Supplies - Scientific Supplies">Business and Industrial Supplies - Scientific Supplies
-              </option>
+              <option value="Business and Industrial Supplies - Scientific Supplies">Business and Industrial Supplies - Scientific Supplies</option>
               <option value="Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, 3D Printer, Thermal Printers, Barcode Scanners">Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, 3D Printer, Thermal Printers, Barcode Scanners</option>
               <option value="Business & Industrial Supplies - Commercial, Food Handling Equipment, and Health Supplies"> Business & Industrial Supplies - Commercial, Food Handling Equipment, and Health Supplies</option>
               <option value="Business and Industrial Supplies - Hand and Power Tools">Business and Industrial Supplies - Hand and Power Tools</option>

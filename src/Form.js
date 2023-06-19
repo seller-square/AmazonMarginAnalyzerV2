@@ -20,7 +20,7 @@ function Form() {
     packingWeight: '',
     weightDimensions: '',
     categoryUnit: '',
-    tierUnit: '',
+    tierUnit: 'Basic',
     shippingOption: '',
     localShippingCost: '',
     regionalShippingCost: '',
@@ -98,6 +98,7 @@ function Form() {
       }
 
       const data = await response.json(); // Parse the JSON response
+      console.log(payload)
       console.log(data);
       console.log(payload);
       formData = data;

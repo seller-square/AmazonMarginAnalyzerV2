@@ -20,7 +20,7 @@ function Form() {
     packingWeight: '',
     weightDimensions: '',
     categoryUnit: '',
-    tierUnit: '',
+    tierUnit: 'Basic',
     shippingOption: '',
     localShippingCost: '',
     regionalShippingCost: '',
@@ -98,7 +98,9 @@ function Form() {
       }
 
       const data = await response.json(); // Parse the JSON response
+      console.log(payload)
       console.log(data);
+      console.log(payload);
       formData = data;
     } catch (error) {
       console.log(error);
@@ -259,7 +261,6 @@ setShowPopupTwo(false);
               <option value="Software products">Software products</option>
               <option value="School Textbook Bundles">School Textbook Bundles</option>
               <option value="Music">Music</option>
-             
               <option value="Video Games - Consoles">Video Games - Consoles</option>
               <option value="Video Games - Accessories">Video Games - Accessories</option>
               <option value="Video Games - Online game services">Video Games - Online game services</option>
@@ -284,14 +285,14 @@ setShowPopupTwo(false);
               <option value="Baby Hardlines">Baby Hardlines</option>     
               <option value="Grocery and Gourmet - Other Products">Grocery and Gourmet - Other Products</option>
               <option value="Grocery and Gourmet - Hampers and gifting">Grocery and Gourmet - Hampers and gifting</option>
-              <option value="Weighing Scales & Fat Analysers">Weighing Scales & Fat Analysers</option>
+              <option value="Weighing Scales and Fat Analysers">Weighing Scales and Fat Analysers</option>
               <option value="Pharmacy - Prescription Medicines">Pharmacy - Prescription Medicines</option>
               <option value="Personal Care Appliances - Grooming and Styling">Personal Care Appliances - Grooming and Styling</option>
               <option value="Personal Care Appliances - Electric Massagers">Personal Care Appliances - Electric Massagers</option>
               <option value="Personal Care Appliances - Glucometer and Glucometer Strips">Personal Care Appliances - Glucometer and Glucometer Strips</option>
               <option value="Personal Care Appliances - Thermometers">Personal Care Appliances - Thermometers</option>
               <option value="Personal Care Appliances - Other Products">Personal Care Appliances - Other Products</option>
-              <option value="Apparel - Sarees & Dress Materials">Apparel - Sarees & Dress Materials</option>
+              <option value="Apparel - Sarees and Dress Materials">Apparel - Sarees and Dress Materials</option>
               <option value="Apparel - Sweat Shirts and Jackets">Apparel - Sweat Shirts and Jackets</option>
               <option value="Apparel - Other Innerwear">Apparel - Other Innerwear</option>
               <option value="Apparel - Women's Innerwear and Lingerie">Apparel - Women's Innerwear and Lingerie</option>
@@ -311,7 +312,7 @@ setShowPopupTwo(false);
               <option value="Handbags">Handbags</option>
               <option value="Wallets">Wallets</option>
               <option value="Backpacks">Backpacks</option>
-              <option value="Luggage - Suitcase & Trolleys">Luggage - Suitcase & Trolleys</option>
+              <option value="Luggage - Suitcase and Trolleys">Luggage - Suitcase and Trolleys</option>
               <option value="Luggage - Travel Accessories">Luggage - Travel Accessories</option>
               <option value="Luggage - Other Products">Luggage - Other Products</option>
               <option value="Fashion Jewellery">Fashion Jewellery</option>
@@ -320,31 +321,28 @@ setShowPopupTwo(false);
               <option value="Fine Jewellery - Unstudded and Solitaire)">Fine Jewellery - Unstudded and Solitaire</option>
               <option value="Fine Jewellery - Studded">Fine Jewellery - Studded</option>
               <option value="Fine Jewellery - Gold Coins)">Fine Jewellery - Gold Coins</option>
-              <option value="Kitchen Tools & Supplies - Choppers, Knives, Bakeware & Accessories">Kitchen Tools & Supplies - Choppers, Knives, Bakeware & Accessories</option>
+              <option value="Kitchen Tools and Supplies - Choppers, Knives, Bakeware and Accessories">Kitchen Tools and Supplies - Choppers, Knives, Bakeware and Accessories</option>
               <option value="Gas Stoves and Pressure Cookers">Gas Stoves and Pressure Cookers</option>
-              <option value="Cookware, Tableware & Dinnerware">Cookware, Tableware & Dinnerware</option>
-              <option value="Kitchen - Glassware & Ceramicware">Kitchen - Glassware & Ceramicware</option>
+              <option value="Cookware, Tableware and Dinnerware">Cookware, Tableware and Dinnerware</option>
+              <option value="Kitchen - Glassware and Ceramicware">Kitchen - Glassware and Ceramicware</option>
               <option value="Kitchen - Other Products">Kitchen - Other Products</option>
               <option value="Small Appliances">Small Appliances</option>
               <option value="Fans and Robotic Vacuums">Fans and Robotic Vacuums</option>
               <option value="Wall Art">Wall Art</option>
               <option value="Home Fragrance and Candles">Home Fragrance and Candles</option>
               <option value="Home furnishing">Home furnishing</option>
-
-
               <option value="Carpets, Bedsheets, Blankets and covers">Carpets, Bedsheets, Blankets and covers</option>
               <option value="Containers, Boxes, Bottles and Kitchen Storage">Containers, Boxes, Bottles and Kitchen Storage</option> 
               <option value="Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage">Home Storage (Excluding Kitchen Containers, Boxes, Bottles and Kitchen Storage)</option>
               <option value="Home - Waste and Recycling">Home - Waste and Recycling</option>
               <option value="Home - Other Products">Home - Other Products</option>
               <option value="Craft Materials">Craft Materials</option>
-              <option value="Wallpapers & Wallpaper Accessories">Wallpapers & Wallpaper Accessories</option>
+              <option value="Wallpapers and Wallpaper Accessories">Wallpapers and Wallpaper Accessories</option>
               <option value="Home Improvement Accessories">Home Improvement Accessories</option>
               <option value="Safes and Lockers with Locking Mechanism">Safes and Lockers with Locking Mechanism</option>
-              <option value="Home improvement - Kitchen & Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials">Home improvement - Kitchen & Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials
-              </option>
+              <option value="Home improvement - Kitchen and Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials">Home improvement - Kitchen and Bath, Cleaning Supplies, Paints, Electricals, Hardware, Building Materials </option>
               <option value="Ladders">Ladders</option>
-              <option value="Home Safety & Security Systems">Home Safety & Security Systems</option>
+              <option value="Home Safety and Security Systems">Home Safety and Security Systems</option>
               <option value="Home Improvement - Other Products">Home Improvement - Other Products</option>
               <option value="Indoor Lighting - Wall, ceiling fixture lights, lamp bases, lamp shades and Smart Lighting">Indoor Lighting - Wall, ceiling fixture lights, lamp bases, lamp shades and Smart Lighting</option>
               <option value="LED Bulbs and Battens">LED Bulbs and Battens</option>
@@ -352,14 +350,13 @@ setShowPopupTwo(false);
               <option value="Clocks">Clocks</option>
               <option value="Cushion Covers">Cushion Covers</option>
               <option value="Slipcovers and Kitchen Linens">Slipcovers and Kitchen Linens</option>
-              <option value="Lawn & Garden - Commercial Agricultural Products">Lawn & Garden - Commercial Agricultural Products</option>
-              <option value="Lawn & Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets">Lawn & Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets</option>
-              <option value="Lawn & Garden - Chemical Pest Control, Mosquito nets, Bird control, Plant protection, Foggers">Lawn & Garden - Chemical Pest Control, Mosquito Netts, Bird control, Plant protection, Foggers</option>
+              <option value="Lawn and Garden - Commercial Agricultural Products">Lawn and Garden - Commercial Agricultural Products</option>
+              <option value="Lawn and Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets">Lawn and Garden - Solar Devices, Panels, Inverters, Charge controller, Battery, Lights, Solar gadgets</option>
+              <option value="Lawn and Garden - Chemical Pest Control, Mosquito nets, Bird control, Plant protection, Foggers">Lawn and Garden - Chemical Pest Control, Mosquito Netts, Bird control, Plant protection, Foggers</option>
               <option value="Lawn and Garden - Outdoor Equipment">Lawn and Garden - Outdoor Equipment</option>
               <option value="Lawn and Garden - Other Products">Lawn and Garden - Other Products</option>
               <option value="Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools">Lawn and Garden - Plants, Seeds, Bulbs and Gardening Tools</option>
-
-              <option value="Automotive - Tyres & Rims">Automotive - Tyres & Rims</option>
+              <option value="Automotive - Tyres and Rims">Automotive - Tyres and Rims</option>
               <option value="Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools">Automotive - Helmets, Oils and Lubricants, Batteries, Pressure Washer, Vacuum Cleaner, Air Freshener, Air Purifiers, Vehicle Tools</option>
               <option value="Automotive Accessories - Floor Mats, Seat, Car, Bike Covers">Automotive Accessories - Floor Mats, Seat/Car/Bike Covers</option>
               <option value="Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicle">Automotive Vehicles - 2-Wheelers, 4-Wheelers and Electric Vehicle</option>
@@ -372,19 +369,17 @@ setShowPopupTwo(false);
               <option value="Major Appliances - Other Products">Major Appliances - Other Products</option>
               <option value="Mattresses">Mattresses</option>
               <option value="Furniture - Other Products">Furniture - Other Products</option>
-
-              <option value="Bean Bags & Inflatables">Bean Bags & Inflatables</option>
-              <option value="Business and Industrial Supplies - Scientific Supplies">Business and Industrial Supplies - Scientific Supplies
-              </option>
+              <option value="Bean Bags and Inflatables">Bean Bags and Inflatables</option>
+              <option value="Business and Industrial Supplies - Scientific Supplies">Business and Industrial Supplies - Scientific Supplies</option>
               <option value="Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, 3D Printer, Thermal Printers, Barcode Scanners">Business and Industrial Supplies - Electrical Testing, Dimensional Measurement, 3D Printer, Thermal Printers, Barcode Scanners</option>
-              <option value="Business & Industrial Supplies - Commercial, Food Handling Equipment, and Health Supplies"> Business & Industrial Supplies - Commercial, Food Handling Equipment, and Health Supplies</option>
+              <option value="Business and Industrial Supplies - Commercial, Food Handling Equipment, and Health Supplies"> Business and Industrial Supplies - Commercial, Food Handling Equipment, and Health Supplies</option>
               <option value="Business and Industrial Supplies - Hand and Power Tools">Business and Industrial Supplies - Hand and Power Tools</option>
-              <option value="Business & Industrial Supplies - Other Products">Business & Industrial Supplies - Other Products</option>
+              <option value="Business and Industrial Supplies - Other Products">Business and Industrial Supplies - Other Products</option>
               <option value="Bicycles">Bicycles</option>
               <option value="Gym equipments">Gym equipments</option>
               <option value="Sports - Footwear">Sports - Footwear</option>
               <option value="Sports Collectibles">Sports Collectibles</option>
-              <option value="Sports - Cricket & Badminton Equipments, Tennis, Table Tennis, Squash, Football, Volleyball, Basketball, Throwball, Swimming">Sports - Cricket & Badminton Equipments, Tennis, Table Tennis, Squash, Football, Volleyball, Basketball, Throwball, Swimming</option>
+              <option value="Sports - Cricket and Badminton Equipments, Tennis, Table Tennis, Squash, Football, Volleyball, Basketball, Throwball, Swimming">Sports - Cricket and Badminton Equipments, Tennis, Table Tennis, Squash, Football, Volleyball, Basketball, Throwball, Swimming</option>
               <option value="Sports - Other Products">Sports - Other Products</option>
               <option value="Consumable Physical Gift Card">Consumable Physical Gift Card</option>
               <option value="Entertainment Collectibles">Entertainment Collectibles</option>
@@ -394,35 +389,35 @@ setShowPopupTwo(false);
               <option value="Mobile Phones">Mobile Phones</option>
               <option value="Tablets">Tablets</option>
               <option value="Laptops">Laptops</option>
-              <option value="Scanners & Printers">Scanners & Printers</option>
-              <option value="PC Components - RAM & Motherboards">PC Components - RAM & Motherboards</option>
+              <option value="Scanners and Printers">Scanners and Printers</option>
+              <option value="PC Components - RAM and Motherboards">PC Components - RAM and Motherboards</option>
               <option value="Desktops">Desktops</option>
               <option value="Monitors">Monitors</option>
-              <option value="Laptop & Camera Battery">Laptop & Camera Battery</option>
-              <option value="Laptop Bags & Sleeves">Laptop Bags & Sleeves</option>
+              <option value="Laptop and Camera Battery">Laptop and Camera Battery</option>
+              <option value="Laptop Bags and Sleeves">Laptop Bags and Sleeves</option>
               <option value="USB Flash Drives - Pen Drives">USB Flash Drives - Pen Drives</option>
               <option value="Hard Disks">Hard Disks</option>
               <option value="Kindle Accessories">Kindle Accessories</option>
               <option value="Memory Cards">Memory Cards</option>
-              <option value="Modems & Networking Devices">Modems & Networking Devices</option>
+              <option value="Modems and Networking Devices">Modems and Networking Devices</option>
               <option value="Car Electronics Devices">Car Electronics Devices</option>
               <option value="Car Electronics Accessories">Car Electronics Accessories</option>
-              <option value="Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices, Speakers)">Electronic Devices (Excluding TV, Camera & Camcorder, Camera Lenses & Accessories, GPS Devices, Speakers)</option>
+              <option value="Electronic Devices (Excluding TV, Camera and Camcorder, Camera Lenses and Accessories, GPS Devices, Speakers)">Electronic Devices (Excluding TV, Camera and Camcorder, Camera Lenses and Accessories, GPS Devices, Speakers)</option>
               <option value="Landline Phones">Landline Phones</option>
-              <option value="Smart Watches & Accessories">Smart Watches & Accessories</option>
+              <option value="Smart Watches and Accessories">Smart Watches and Accessories</option>
               <option value="Television">Television</option>
-              <option value="Camera & Camcorder">Camera & Camcorder</option>
+              <option value="Camera and Camcorder">Camera and Camcorder</option>
               <option value="Camera Lenses">Camera Lenses</option>
               <option value="Camera Accessories">Camera Accessories</option>
               <option value="GPS Devices">GPS Devices</option>
               <option value="Speakers">Speakers</option>
-              <option value="Headsets, Headphones & Earphones">Headsets, Headphones & Earphones</option>
-              <option value="Computer & Laptop - Keyboards & Mouse">Computer & Laptop - Keyboards & Mouse</option>
-              <option value="Power Banks & Chargers">Power Banks & Chargers</option>
-              <option value="Accessories - Electronics, PC & Wireless">Accessories - Electronics, PC & Wireless</option>
-              <option value="Cases, Covers, Skins & Screen Guards">Cases, Covers, Skins & Screen Guards</option>
-              <option value="Cables & Adapters - Electronics, PC, Wireless">Cables & Adapters - Electronics, PC, Wireless</option>
-              <option value="Car Cradles, Lens Kits & Tablet Cases">Car Cradles, Lens Kits & Tablet Cases</option>
+              <option value="Headsets, Headphones and Earphones">Headsets, Headphones and Earphones</option>
+              <option value="Computer and Laptop - Keyboards and Mouse">Computer and Laptop - Keyboards and Mouse</option>
+              <option value="Power Banks and Chargers">Power Banks and Chargers</option>
+              <option value="Accessories - Electronics, PC and Wireless">Accessories - Electronics, PC and Wireless</option>
+              <option value="Cases, Covers, Skins and Screen Guards">Cases, Covers, Skins and Screen Guards</option>
+              <option value="Cables and Adapters - Electronics, PC, Wireless">Cables and Adapters - Electronics, PC, Wireless</option>
+              <option value="Car Cradles, Lens Kits and Tablet Cases">Car Cradles, Lens Kits and Tablet Cases</option>
               <option value="Warranty Services">Warranty Services</option>
               <option value="Office - Electronic Devices">Office - Electronic Devices</option>
               <option value="Office - Other Products">Office - Other Products</option>

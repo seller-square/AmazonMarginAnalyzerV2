@@ -171,36 +171,42 @@ setShowPopupTwo(false);
       </div>
       <form onSubmit={handleSubmit} className='product-form'>
         <div className='formFields'>
-            <div>
-              <label className='inputLabels' >Product Cost Price <br /> <p className='sidep'>Excluding GST</p></label>
-            </div>
-            <div className=''>
+          <div>
+            <label className='inputLabels' >Product Cost Price <br /> <p className='sidep'>Excluding GST</p></label>
+          </div>
+          <div className=''>
             <input className='product-form-input' type="text" id="costPrice" name="costPrice" value={formValues.costPrice} placeholder="&#8377;" onChange={handleChange} required />
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels' >Product Selling Price <br /> <p className='sidep'>Including GST</p></label>
+          <div>
+            <label className='inputLabels' >Product Selling Price <br /> <p className='sidep'>Including GST</p></label>
+          </div>
           <div className=''>
             <input className='product-form-input' type="text" id="sellingPrice" name="sellingPrice" value={formValues.sellingPrice} placeholder="&#8377;" onChange={handleChange} required />
           </div>
         </div>
-        <br></br>
-        <div className='gst-col'>
-          <div className='formFields'>
+        
+       
+        <div className='formFields'>
+          <div>
             <label className='inputLabels' >Product GST <br /> <p className='sidep'>GST Rate</p></label>
-            <div className=''>
-              <select className='' id="gstValues" name="gstRate" value={formValues.gstRate} onChange={handleChange} required>
-                <option value="0.00">0%</option>
-                <option value="0.05">5%</option>
-                <option value="0.12">12%</option>
-                <option value="0.18">18%</option>
-                <option value="0.28">28%</option>
-              </select>
-            </div>
+          </div>
+          <div className=''>
+            <select className='' id="gstValues" name="gstRate" value={formValues.gstRate} onChange={handleChange} required>
+              <option value="0.00">0%</option>
+              <option value="0.05">5%</option>
+              <option value="0.12">12%</option>
+              <option value="0.18">18%</option>
+              <option value="0.28">28%</option>
+            </select>
           </div>
         </div>
+        
         <div className='formFields'>
-          <label className='inputLabels' >Discount on Selling Price<br /> <p className='sidep'>Enter Percentage or value</p></label>
+          <div>
+            <label className='inputLabels' >Discount on Selling Price<br /> <p className='sidep'>Enter Percentage or value</p></label>
+          </div>
           <div className='one'>
             <div>
               
@@ -219,7 +225,9 @@ setShowPopupTwo(false);
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels' >Packaging Dimensions<br /> <p className='sidep'>Length, Width & Height</p></label>
+          <div>
+            <label className='inputLabels' >Packaging Dimensions<br /> <p className='sidep'>Length, Width & Height</p></label>
+          </div>
           <div className='two'>
           
             <label className='form-label'>L </label>
@@ -227,7 +235,7 @@ setShowPopupTwo(false);
             <label className='form-label'>W </label>
             <input className='product-form-input-3' type="number" id="breadth" name="breadth" value={formValues.breadth} placeholder="" onChange={handleChange} required />
             <label className='form-label'>H </label>
-            <input className='product-form-input-3' type="number" id="height" name="height" value={formValues.height} placeholder="" onChange={handleChange} required />
+            <input className='product-form-input-end' type="number" id="height" name="height" value={formValues.height} placeholder="" onChange={handleChange} required />
             <select className='' id='measurementDimensions'
                 value={formValues.measurementDimensions}
                 onChange={handleChange}
@@ -240,7 +248,9 @@ setShowPopupTwo(false);
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels'>Packaging Weight<br /> <p className='sidep'>Nett Weight</p></label>
+          <div>
+            <label className='inputLabels'>Packaging Weight<br /> <p className='sidep'>Nett Weight</p></label>
+          </div>
           <div className='one'>
             <div>
               
@@ -258,7 +268,9 @@ setShowPopupTwo(false);
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels'>Amazon Product Category<br /> <p className='sidep'>Select Category</p></label>
+          <div>
+            <label className='inputLabels'>Amazon Product Category<br /> <p className='sidep'>Select Category</p></label>
+          </div>
           <div className=''>
             <select className='' id="categoryUnit" name="categoryUnit" value={formValues.categoryUnit} onChange={handleChange} required>
               <option value="">Select Product Category</option>
@@ -436,7 +448,9 @@ setShowPopupTwo(false);
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels'>Amazon Seller Tier<br /> <p className='sidep'>STEP Tier</p></label>
+          <div>
+            <label className='inputLabels'>Amazon Seller Tier<br /> <p className='sidep'>STEP Tier</p></label>
+          </div>          
           <div className=''>
             <select className='' id="tierUnit" name="tierUnit" value={formValues.tierUnit} onChange={handleChange} required>
               <option value="Basic">Basic</option>
@@ -446,7 +460,9 @@ setShowPopupTwo(false);
           </div>
         </div>
         <div className='formFields'>
-          <label className='inputLabels'> Shipping Methods<br /><p className='sidep'>Select Shipping Methods</p> </label>
+          <div>
+            <label className='inputLabels'> Shipping Methods<br /><p className='sidep'>Select Shipping Methods</p> </label>
+          </div>
           <div className='radio'>
             <div>
               <input className='radio-item'
@@ -566,6 +582,7 @@ setShowPopupTwo(false);
 
           ) : null
         }
+        
         <button type="submit" className='submitButton'>Generate Margin Analysis</button>
       </form >
       {showPopup && (

@@ -44,10 +44,12 @@ code {
 
 .product-form {
   display: flex;
-  width: 50%;
+ 
   flex-direction: column;
-  margin-top: 50px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  align-content: space-around;
+    
+ 
 }
 
 .inputLabels {
@@ -83,14 +85,14 @@ code {
 
 .product-form-input-2 {
   flex: 1;
-  width: 325px;
+  width: 307px;
   height: 25px;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid gray;
   font-size: 14px;
   background: #F3F4F6FF;
-  margin-right: 2px;
+  margin-right: 10px;
   border-radius: 5px;
   /* margin-bottom: 5px; */
 }
@@ -158,7 +160,7 @@ code {
 }
 
 .form-label {
-  margin-right: 1.35px;
+  margin-right: 5px;
   float: left;
   font-family: Helvetica;
   font-size: 15px;
@@ -314,7 +316,7 @@ img {
 
 .formFields {
   display: flex;
-  /* margin-top: 10px; */
+  margin-top: 10px;
 }
 
 .productDetails {
@@ -353,8 +355,9 @@ select {
   font-family: Helvetica;
   color: gray;
   font-size: 14px;
-  flex: 1;
+  
   border-radius: 5px;
+  padding:10px;
 }
 
 /* button */
@@ -424,11 +427,12 @@ input::placeholder {
 }
 
 #percentOrValue {
-  width: 60px;
+  width: 75px;
   height: 47px;
   font-size: 14px;
   background: #F3F4F6FF;
   margin-right: 10px;
+  text-align: right;
 }
 
 .radio {
@@ -443,18 +447,21 @@ input::placeholder {
 }
 
 #weightDimensions{
-  width: 60px;
+  width: 75px;
   height: 47px;
   font-size: 14px;
   background: #F3F4F6FF;
   margin-right: 10px;
+  text-align: right;
 }
 #measurementDimensions{
-  width: 60px;
+  max-width: 75px;
   height: 47px;
   font-size: 14px;
   background: #F3F4F6FF;
   margin-right: 10px; 
+  text-align: right;
+  
 }
 
 #add {
@@ -597,10 +604,11 @@ margin-bottom: 10px; */
 }
 
 .two {
-  width: 415px;
+  width: 425px;
   height: 50px;
-  box-sizing: border-box;
-  display: flex;
+ 
+  display:flex;
+  flex-direction:row;
   /* margin-top: 20px;
 margin-bottom: 10px; */
 }
@@ -621,9 +629,7 @@ margin-bottom: 10px; */
    .submitButton{
     margin-left: 0px;
    }
-   .productDetails{
-    margin-left: 10rem;
-   }
+   
    .tableHeading {
     margin-left: 10rem;
   }
@@ -669,8 +675,7 @@ margin-bottom: 10px; */
   }
   
   .product-form-input-3 {
-    float: left;
-    flex: 1;
+    
     height: 100%;
     font-size: 14px;
     border: 1px solid gray;
@@ -727,6 +732,7 @@ margin-bottom: 10px; */
     background: #F3F4F6FF;
     margin-right: 5px;
     float: left;
+    margin-left: 10px; 
     /* margin-bottom: 30px; */
   }
   select {

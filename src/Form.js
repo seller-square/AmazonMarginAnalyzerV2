@@ -171,8 +171,10 @@ setShowPopupTwo(false);
       </div>
       <form onSubmit={handleSubmit} className='product-form'>
         <div className='formFields'>
-          <label className='inputLabels' >Product Cost Price <br /> <p className='sidep'>Excluding GST</p></label>
-          <div className=''>
+            <div>
+              <label className='inputLabels' >Product Cost Price <br /> <p className='sidep'>Excluding GST</p></label>
+            </div>
+            <div className=''>
             <input className='product-form-input' type="text" id="costPrice" name="costPrice" value={formValues.costPrice} placeholder="&#8377;" onChange={handleChange} required />
           </div>
         </div>
@@ -201,6 +203,9 @@ setShowPopupTwo(false);
           <label className='inputLabels' >Discount on Selling Price<br /> <p className='sidep'>Enter Percentage or value</p></label>
           <div className='one'>
             <div>
+              
+              <input className='product-form-input-2' type="text" id="discount" name="discount" value={formValues.discount} placeholder="&#8377;" onChange={handleChange} required />
+            
               <select className='' id='percentOrValue'
                 value={formValues.percentOrValue}
                 onChange={handleChange}
@@ -210,14 +215,20 @@ setShowPopupTwo(false);
                 <option value="absoulteValue">value</option>
                 <option value="percentValue">%</option>
               </select>
-              <input className='product-form-input-2' type="text" id="discount" name="discount" value={formValues.discount} placeholder="&#8377;" onChange={handleChange} required />
-            </div>
+              </div>
           </div>
         </div>
         <div className='formFields'>
           <label className='inputLabels' >Packaging Dimensions<br /> <p className='sidep'>Length, Width & Height</p></label>
           <div className='two'>
-          <select className='' id='measurementDimensions'
+          
+            <label className='form-label'>L </label>
+            <input className='product-form-input-3' type="number" id="length" name="length" value={formValues.length} placeholder="" onChange={handleChange} required />
+            <label className='form-label'>W </label>
+            <input className='product-form-input-3' type="number" id="breadth" name="breadth" value={formValues.breadth} placeholder="" onChange={handleChange} required />
+            <label className='form-label'>H </label>
+            <input className='product-form-input-3' type="number" id="height" name="height" value={formValues.height} placeholder="" onChange={handleChange} required />
+            <select className='' id='measurementDimensions'
                 value={formValues.measurementDimensions}
                 onChange={handleChange}
                 name="measurementDimensions"
@@ -226,18 +237,14 @@ setShowPopupTwo(false);
                 <option value="cm">cm</option>
                 <option value="inch">inch</option>
               </select>
-            <label className='form-label'>L </label>
-            <input className='product-form-input-3' type="number" id="length" name="length" value={formValues.length} placeholder="" onChange={handleChange} required />
-            <label className='form-label'>W </label>
-            <input className='product-form-input-3' type="number" id="breadth" name="breadth" value={formValues.breadth} placeholder="" onChange={handleChange} required />
-            <label className='form-label'>H </label>
-            <input className='product-form-input-end' type="number" id="height" name="height" value={formValues.height} placeholder="" onChange={handleChange} required />
           </div>
         </div>
         <div className='formFields'>
           <label className='inputLabels'>Packaging Weight<br /> <p className='sidep'>Nett Weight</p></label>
           <div className='one'>
             <div>
+              
+              <input className='product-form-input-2' type="text" id="packingWeight" name="packingWeight" value={formValues.packingWeight} placeholder="" onChange={handleChange} required />
               <select className='' id='weightDimensions'
                 value={formValues.weightDimensions}
                 onChange={handleChange}
@@ -247,7 +254,6 @@ setShowPopupTwo(false);
                 <option value="g">g</option>
                 <option value="kg">kg</option>
               </select>
-              <input className='product-form-input-2' type="text" id="packingWeight" name="packingWeight" value={formValues.packingWeight} placeholder="" onChange={handleChange} required />
             </div>
           </div>
         </div>

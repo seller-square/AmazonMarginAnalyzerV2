@@ -26,7 +26,10 @@ body {
 code {
   font-family: Helvetica;
 }
-
+.onein{
+  display: flex;
+  flex-direction: row;
+}
 .cta {
   background-color: #4CAF50;
   /* Green */
@@ -44,10 +47,12 @@ code {
 
 .product-form {
   display: flex;
-  width: 50%;
+ 
   flex-direction: column;
-  margin-top: 50px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  align-content: space-around;
+    
+ 
 }
 
 .inputLabels {
@@ -83,14 +88,14 @@ code {
 
 .product-form-input-2 {
   flex: 1;
-  width: 325px;
+  width: 307px;
   height: 25px;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid gray;
   font-size: 14px;
   background: #F3F4F6FF;
-  margin-right: 2px;
+  
   border-radius: 5px;
   /* margin-bottom: 5px; */
 }
@@ -158,7 +163,7 @@ code {
 }
 
 .form-label {
-  margin-right: 1.35px;
+  margin-right: 5px;
   float: left;
   font-family: Helvetica;
   font-size: 15px;
@@ -189,6 +194,7 @@ code {
   border: none;
   border-radius: 6px;
   /* border-l */
+  
 }
 
 /* Hover */
@@ -214,9 +220,9 @@ code {
 
 /* header CSS */
 img {
-  margin-left: 10vh;
+  
   width: 7vh;
-  margin-top: 3vh;
+ 
   height: 3vw;
 }
 .popup{
@@ -276,7 +282,7 @@ img {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 5 vw;
-  width: 100%;
+  width: 100%-2rem;
   overflow: visible;
 }
 
@@ -314,7 +320,9 @@ img {
 
 .formFields {
   display: flex;
-  /* margin-top: 10px; */
+  margin-top: 10px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
 .productDetails {
@@ -353,8 +361,9 @@ select {
   font-family: Helvetica;
   color: gray;
   font-size: 14px;
-  flex: 1;
+  margin-left: 10px;
   border-radius: 5px;
+  padding:10px;
 }
 
 /* button */
@@ -380,8 +389,9 @@ select {
   opacity: 1;
   border: none;
   border-radius: 6px;
-  margin-left: 250px;
+  
   /* border-l */
+  align-self: center;
 }
 
 .submitButton:hover{
@@ -424,11 +434,12 @@ input::placeholder {
 }
 
 #percentOrValue {
-  width: 60px;
+  width: 75px;
   height: 47px;
   font-size: 14px;
   background: #F3F4F6FF;
-  margin-right: 10px;
+  
+  text-align: right;
 }
 
 .radio {
@@ -436,6 +447,7 @@ input::placeholder {
   grid-template-columns: 1fr 1fr;
   grid-row-gap: 4px;
   align-items: center;
+  margin-right: 50px;
 }
 
 .radio-item {
@@ -443,18 +455,21 @@ input::placeholder {
 }
 
 #weightDimensions{
-  width: 60px;
+  width: 75px;
   height: 47px;
   font-size: 14px;
   background: #F3F4F6FF;
-  margin-right: 10px;
+  
+  text-align: right;
 }
 #measurementDimensions{
-  width: 60px;
+  max-width: 75px;
   height: 47px;
   font-size: 14px;
   background: #F3F4F6FF;
-  margin-right: 10px; 
+  
+  text-align: right;
+  
 }
 
 #add {
@@ -491,12 +506,15 @@ input::placeholder {
 /* table CSS */
 table {
   border-collapse: collapse;
-  width: 43%;
-  margin-top: 2rem;
+  
   margin-bottom: 2rem;
   align-items: left;
-  margin-left: 25%;
-  margin-right: 25%;
+  
+}
+.tableWrapper{
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 table {
@@ -576,31 +594,33 @@ table tbody tr:hover {
 }
 
 .tableHeading {
-  margin-left: 35%;
-  width: 712px;
+  
+  
   font-family: Helvetica;
   font-size: 25px;
   line-height: 33px;
   color: #171A1FFF;
   margin-top: 50px;
   display: flex;
+  flex-direction: column;
+  align-self: center;
   /* text-align: center; */
 }
 
 .one {
-  width: 425px;
+ 
   height: 50px;
-  box-sizing: border-box;
-  display: flex;
+ 
   /* margin-top: 10px;
 margin-bottom: 10px; */
 }
 
 .two {
-  width: 415px;
+  width: 425px;
   height: 50px;
-  box-sizing: border-box;
-  display: flex;
+ 
+  display:flex;
+  flex-direction:row;
   /* margin-top: 20px;
 margin-bottom: 10px; */
 }
@@ -616,18 +636,25 @@ margin-bottom: 10px; */
     display: none;
   } */
   .formFields{
-    display: block;
-   }
+    flex-direction: column;
+  }
    .submitButton{
     margin-left: 0px;
    }
-   .productDetails{
-    margin-left: 10rem;
+   Select{
+    margin-left: 0px;
+   
    }
-   .tableHeading {
-    margin-left: 10rem;
-  }
- 
+   .product-form-input-2 {
+    margin-right: 10px;
+   }
+   .product-form-input-3{
+    max-width:90px;
+   }
+   .product-form-input-end{
+    max-width: 84px;
+    margin-right: 10px;
+   }
 }
 
 @media (max-width: 768px) {
@@ -651,9 +678,7 @@ margin-bottom: 10px; */
     text-align: center;
     font-size: 22px;
   }
-  .header{
-    width: 120%;
-  }
+  
   .product-form-input-2 {
     flex: 1;
     width: 250px;
@@ -669,8 +694,7 @@ margin-bottom: 10px; */
   }
   
   .product-form-input-3 {
-    float: left;
-    flex: 1;
+    
     height: 100%;
     font-size: 14px;
     border: 1px solid gray;
@@ -727,6 +751,7 @@ margin-bottom: 10px; */
     background: #F3F4F6FF;
     margin-right: 5px;
     float: left;
+    margin-left: 10px; 
     /* margin-bottom: 30px; */
   }
   select {
@@ -767,6 +792,7 @@ margin-bottom: 10px; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
+  margin-right: 50px;
 }
 
 .radio-item {
@@ -793,5 +819,16 @@ margin-bottom: 10px; */
 }
 .cancel-btn{
   margin-left: 300px;
+}
+table{
+  scale: 0.8;
+  margin-top: 0%;
+}
+.tableHeading{
+  font-size:large;
+  margin-top: 20px;
+}
+.product-form{
+  margin-left: 30px;
 }
 }
